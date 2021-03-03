@@ -7,14 +7,15 @@ export default class Board extends React.Component {
     }
 
     render() {
+        console.log(this.props.board);
         return(
-            <div>
-                {this.props.board.map((row, idx) => {
+            <div className="board">
+                {this.props.board.grid.map((row, idx) => {
                     return (
-                        <div>
-                        {row.map((col, jdx) => {
+                        <div className="row" key={idx}>
+                        {row.map((tile, jdx) => {
                             return (
-                                <Tile update={this.props.update} key={[idx,jdx]}></Tile>
+                                <Tile tile = {tile} updateGame={this.props.updateGame} key={jdx}></Tile>
                             )
                         })}
                         </div>

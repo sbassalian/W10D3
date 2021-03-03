@@ -1,11 +1,28 @@
 import React from "react"
 
 export default class Tile extends React.Component {
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e){
+
+    }
     render() {
+        let response = ""
+        if (this.props.tile.flagged) {
+            response = "🚩";
+        }
+        else if (this.props.tile.bombed && this.props.tile.explored) {
+            response = "💣";
+        }
+        else if (this.props.tile.explored) {
+            response = this.props.tile.adjacentBombCount();
+        }
         return(
-            <div>
-            <p>Tile!</p>
-            <p>Another Paragraph</p>
+            <div className="tile" onClick={this.handleClick}>
+                <p>{response}</p>
             </div>
         )
     }

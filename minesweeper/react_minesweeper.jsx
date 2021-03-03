@@ -7,8 +7,7 @@ import Tile from './components/tile.jsx';
 function Root() {
     return(
         <div>
-            <Tile/>
-            <Tile/>
+            <Game/>
         </div>
     )
 }

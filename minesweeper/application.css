@@ -1,0 +1,19 @@
+.tile{
+    background-color: grey;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border-style: inset;
+}
+
+.board{
+    margin: 100px auto;
+    width: fit-content;
+    /* padding: 50px; */
+    border: 1px solid black;
+    border-style: outset;
+}
+
+.row{
+    display: flex;
+}
