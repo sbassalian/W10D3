@@ -1,15 +1,28 @@
+body{
+    background-color: #67dce0;
+}
 .tile{
     background-color: grey;
     border: 1px solid black;
     width: 40px;
     height: 40px;
     border-style: inset;
+    text-align: center;
+    vertical-align: auto;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.tile > p{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+    padding: auto;
 }
 
 .board{
-    margin: 100px auto;
+    margin: 50px auto;
     width: fit-content;
-    /* padding: 50px; */
     border: 1px solid black;
     border-style: outset;
 }
@@ -42,4 +55,7 @@
 button {
     width: 100px;
     margin: auto;
+}
+.title {
+    text-align: center;
 }

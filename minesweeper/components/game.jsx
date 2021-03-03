@@ -38,12 +38,13 @@ export default class Game extends React.Component {
        
         return (
             <div>
+                <h1 className="title">MineSweeper!</h1>
             <Board board={this.state.board} updateGame={this.updateGame}/>
                 {gameOver ? <div className="modal">
                     <div className="modal-box">{message}
                     <button onClick={this.restartGame}>Restart Game</button>
                     </div>
-                    </div> : <div>""</div>}
+                    </div> : <div></div>}
             </div>
         )
     }
