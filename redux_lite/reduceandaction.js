@@ -19,15 +19,27 @@ const changeRoleToPresident = {
 };
 
 
-const roleReducer = (oldRole = null, action) => {
+const roleReducer = (state = {}, action) => {
     if (action.type === "change role"){
-        state.role = action.newRole;
-        return action.newRole;
+        
+        return [...state, action.newRole];
     } else {
-        return oldRole;
+        return state;
     }
 };
 
-const combineReducers
+const nameReducer = (state = {}, action) => {
+    if (action.type === "change name"){
+        return[...state, action.newName]
+    }else {
+        return state;
+    }
+}
+let obj ={ name: nameReducer, 
+    role: roleReducer }
+
+const combineReducers = (object) => {
+
+}
 
 
