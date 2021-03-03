@@ -7,7 +7,11 @@ export default class Tile extends React.Component {
     }
 
     handleClick(e){
-
+        let isFlagging = false;
+        if(e.altKey){
+            isFlagging = true;
+        }
+        this.props.updateGame(this.props.tile, isFlagging)
     }
     render() {
         let response = ""
